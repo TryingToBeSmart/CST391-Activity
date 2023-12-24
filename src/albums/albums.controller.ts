@@ -130,7 +130,7 @@ export const updateAlbum: RequestHandler = async (req: Request, res: Response) =
         console.log('req.body', req.body);
         console.log('album', okPacket);
 
-        req.body.tracks.forEach(async (track: Track, index: number) => {
+        req.body.tracks.forEach(async (track: Track) => {
             try {
                 await TracksDao.updateTrack(track);
             } catch (error) {

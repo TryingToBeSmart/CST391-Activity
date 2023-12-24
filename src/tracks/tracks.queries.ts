@@ -1,8 +1,8 @@
 export const trackQueries = {
     createTrack: `
         INSERT INTO 
-            tracks (album_id, title, number, video_url) 
-        VALUES(?,?,?,?)
+            tracks (album_id, title, number, video_url, lyrics) 
+        VALUES(?,?,?,?,?)
         `,
     readTracks: `
         SELECT
